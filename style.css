@@ -1,0 +1,136 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(137, 156, 156);
+}
+
+.container {
+  position: relative;
+  width: 400px;
+  height: 105px;
+  background-color: #fff;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 15px ;
+  font-family: "Poppins", sans-serif;
+  transition: 0.6s ease-out;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: min-content;
+  padding-top: 5px;
+}
+
+.search input {
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 15px;
+  color: rgb(29, 28, 28);
+}
+
+.search input::placeholder {
+  text-transform: none;
+}
+
+.search button {
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: rgba(49, 49, 44, 0.205);
+  height: 50px;
+  width: 50px;
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  transition: 0.5s ease;
+}
+
+.search button:hover{
+  background-color: black;
+  color: white;
+  box-shadow: 3px 3px 4px gray;
+}
+
+.search i {
+  font-size: 22px;
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  scale: 0;
+  opacity: 0;
+  display: none;
+}
+
+.not-found img{
+  width: 150px;
+  padding-bottom: 15px;
+}
+
+.presentation {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.presentation .humidity {
+  padding-right: 30px;
+}
+
+.weather-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-box img {
+  height: 200px;
+}
+
+.weather-box p:first-of-type {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-top: 30px;
+  margin-left: -15px;
+}
+
+.weather-box p:last-of-type{
+  font-size: 15px;
+  padding-top: 15px;
+}
+
+.weather-box, .presentation {
+  scale: 0;
+  opacity: 0;
+}
+
+.fadeIn {
+  animation: 0.5s fadeIn forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
